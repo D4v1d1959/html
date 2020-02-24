@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        class Car
+        {
+            constructor(model, color, year, brand, type)
+            {
+                this.carmodel = model;
+                this.carcolor = color;
+                this.caryear = year;
+                this.carbrand = brand;
+                this.cartype = type;
+            }
+            car1(){
+                return "This " + this.carbrand + " " + this.carmodel + " is a brand new " + this.caryear + " " + this.cartype;
+            }
+        }
+        
+
+        mycar = new Car("Versa", "red", 2020, "Nissan", "sedan"); 
+        document.getElementById("demo").innerHTML = mycar.car1();
+
+    </script>
+
+</body>
+</html>
