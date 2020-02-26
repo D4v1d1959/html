@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        class car
+        {
+            constructor(model, color, year, brand, type)
+            {
+                this.carmodel = model;
+                this.caryear = year;
+                this.carbrand = brand;
+                this.cartype = type;
+                this.carcolor = color; 
+            }
+            car1()
+            {
+                return "This " + this.carbrand + " " + this.carmodel + " is a brand new " + this.caryear + " " + this.carcolor + " " + this.cartype + ".";
+            }
+        }
+        class owner extends car
+        {
+            constructor(model, color, year, brand, type, owner)
+            {
+                super(model, color, year,brand, type,owner);
+                this.carowner = owner;
+            }
+            ownedcar()
+            {
+                return "My name is " + this.carowner + " and " + this.car1();
+            }
+        }
+        car2 = new owner("Versa", "red", 2020, "Nissan", "sedan", "David");
+        document.getElementById("demo").innerHTML = car2.ownedcar();
+        
+        document.getElementById("demo").innerHTML = mycar.car1();
+
+    </script>
+
+</body>
+</html>
